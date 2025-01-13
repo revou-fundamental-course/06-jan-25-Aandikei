@@ -73,11 +73,13 @@ section>header>p{
     /* border: 1px solid; */
     width: 500px;
     margin-top: 0;
+    margin-bottom: 5px;
 }
 
 .banner-image{
     border: 1px solid;
     border-radius: 5px;
+    margin-top: 10px;
     margin-left: -50px;
     height: 550px;
     background-image: url("https://img.freepik.com/premium-vector/avatar-profile-icon-flat-style-male-user-profile-vector-illustration-isolated-background-man-profile-sign-business-concept_157943-38764.jpg");
@@ -85,6 +87,73 @@ section>header>p{
     /* background-position: center; */
 }
 
+section .content1{
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;;
+    height: 400px;
+}
+
+.card{
+    /* border: 1px solid; */
+    border-radius: 20px;
+    /* margin-left: 50px; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 365px;
+}
+
+.about{
+    /* border: 1px solid; */
+    margin: 10px;
+    text-align: justify;
+    /* height: 100%; */
+    width: 400px;
+}
+
+.logoProfile{
+    background-image: url("https://img.freepik.com/premium-vector/avatar-profile-icon-flat-style-male-user-profile-vector-illustration-isolated-background-man-profile-sign-business-concept_157943-38764.jpg");
+    background-size: 160px;
+    background-position: center;
+    border: 1px solid;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.history{
+    /* border: 1px solid; */
+    height: 100%;
+    width: 500px;
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    /* margin-left: 20px; */
+    /* align-items: center; */
+}
+
+.history-title{
+    display: flex;
+    justify-content: left;
+    margin-left: 40px;
+}
+
+.history>ul>li>h2{
+    /* border: 1px solid; */
+    font-size: 16px;
+    /* margin-left: 20px; */
+    margin-top: 0;
+    margin-bottom: -20px;
+}
+
+.history>ol>li>p{
+    /* border: 1px solid; */
+    margin-top: 0;
+    /* margin-left: 10px; */
+}
 /* End Main */
 
 /* Footer */
