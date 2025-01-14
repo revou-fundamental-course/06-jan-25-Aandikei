@@ -53,3 +53,31 @@ function setSenderUI(name, birthDate, gender, message) {
     document.getElementById("senderGender").innerHTML = gender;
     document.getElementById("senderMessage").innerHTML = message;
 }
+
+// Add this to your existing JavaScript file
+
+const burgerMenu = document.querySelector('.burger-menu');
+const navMenu = document.querySelector('.nav-menu');
+
+burgerMenu.addEventListener('click', () => {
+    burgerMenu.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+// Close menu when clicking a link
+document.querySelectorAll('nav > ul > a').forEach(link => {
+    link.addEventListener('click', () => {
+        burgerMenu.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!burgerMenu.contains(e.target) && !navMenu.contains(e.target)) {
+        burgerMenu.classList.remove('active');
+        navMenu.classList.remove('active');
+    }
+});
+
+// Your existing JavaScript code remains below this...

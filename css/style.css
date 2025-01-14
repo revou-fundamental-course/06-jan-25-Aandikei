@@ -5,10 +5,11 @@
     font-family: 'Poppins', sans-serif;
 }
 /* Header */
-.main-header{
+.main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 25px;
 }
 
 .logo-icon{
@@ -23,13 +24,40 @@
     
 }
 
-nav{
+nav {
     border: 1px solid;
     width: 600px;
     border-radius: 5px;
     margin-right: 100px;
-    /* padding: 10px; */
 }
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Burger menu active states */
+.burger-menu.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
 
 nav>ul{
     padding: 0px;
@@ -68,18 +96,22 @@ nav a:hover{
 section{
     height: auto;
     margin-top: 50px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
 }
 
 section>header>h1{
     /* border: 1px solid; */
     text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    /* margin-left: -50px; */
     width: 500px;
     margin-bottom: 0;
 }
 
 #btnName{
     display: inline-block;
+    margin-left: 30px;
     padding: 5px 10px;
     border-radius: 5px;
     text-decoration: none;
@@ -94,17 +126,19 @@ section>header>h1{
     color: black;
 }
 
-section>header>h1{
+/* section>header>h1{
     display: flex;
     justify-content: center;
-}
+} */
 
 section>header>h2{
     margin-bottom: 0;
+    margin-left: 30px;
 }
 
 section>header>p{
     /* border: 1px solid; */
+    margin-left: 30px;
     width: 500px;
     margin-top: 0;
     margin-bottom: 5px;
@@ -120,9 +154,6 @@ section>header>p{
     background-size: 100px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     /* background-position: center; */
-.imageList{
-    margin-left: -50px;  
-}
 
 .imageList img{
     max-width: 100%;
@@ -231,8 +262,8 @@ margin-bottom: -10px;
 
 .history-title{
     display: flex;
-    justify-content: left;
-    margin-left: 40px;
+    justify-content: center;
+    /* margin-left: 0px; */
 }
 
 .history>ul>li>h2{
@@ -427,3 +458,42 @@ footer i:hover{
     color: rgb(163, 212, 255);
 }
 /* End Footer */
+
+
+@media screen and (max-width: 860px) {
+    .burger-menu {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 70%;
+        height: 100vh;
+        background-color: white;
+        margin: 0;
+        padding: 80px 0;
+        transition: 0.3s;
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    nav > ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav > ul > a {
+        width: 100%;
+        padding: 15px 0;
+        border-right: none;
+        border-bottom: 1px solid;
+    }
+
+    nav > ul > a:last-child {
+        border-bottom: none;
+    }
+}
