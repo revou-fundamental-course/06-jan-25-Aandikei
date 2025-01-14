@@ -18,8 +18,8 @@
         <nav>
             <ul>
                 <a href="#home">Home</a>
-                <a href="#our-profile">Our Profile</a>
-                <a href="#portfolio">Portfolio</a>
+                <a href="#about-me">About Me</a>
+                <a href="#our-service">Our Service</a>
                 <a class="end-border" href="#message-us">Message Us</a>
             </ul>
         </nav>
@@ -28,24 +28,30 @@
     <main>
         <section>
             <header id="home">
-                <h1>Hello <span id="userGreeting"></span>, Welcome to my website</h1>
+                <h2>Hello <span id="userGreeting"></span>, Welcome to my website</h2>
                 <p>Ini adalah website pertama saya</p>
-                <button id="btnName">Ganti Nama Anda</button>
+                <a href="#" id="btnName">Ganti Nama Anda</a>
             </header>
-            <div class="banner-image">
-                <!-- <img src="https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Banner Image"> -->
+            <div class="imageList">
+                <img class="imgSlideShow" src="https://plus.unsplash.com/premium_photo-1720287601920-ee8c503af775?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img1">
+                <img class="imgSlideShow" src="https://plus.unsplash.com/premium_photo-1720287601300-cf423c3d6760?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img2">
+                <img class="imgSlideShow" src="https://plus.unsplash.com/premium_photo-1720551256796-624029b9dc84?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img3">
             </div>
+            <!-- <a href="#" class="btnSlide" onclick="plusSlides(-1)">Previous</a>
+            <a href="#" class="btnSlide" onclick="plusSlides(1)">Next</a> -->
         </section>
         <section>
-            <header id="our-profile">
-                <h1>Our Profile</h1>
+            <header id="about-me">
+                <h1>About Me</h1>
             </header>
             <div class="content1">
                 <div class="card">
                 <div class="logoProfile"></div>
+                <h3>Name</h3>
                 <div class="about">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse eum expedita voluptatum necessitatibus assumenda quam itaque suscipit autem vero recusandae nam inventore, architecto dolorem quod quo obcaecati distinctio ea eligendi.
                     </p>
+                    <a href="https://wa.link/hxg2rq" target="_blank" class="btnHire">Hire Me</a>
                 </div>
             </div>
             <div class="history">
@@ -58,11 +64,25 @@
             </div>
         </section>
         <section>
-            <header id="portfolio">
-                <h1>Portfolio</h1>
+            <header id="our-service">
+                <h1>Our Services</h1>
             </header>
             <div class="content2">
-
+                <div class="service">
+                    <i class="fa-solid fa-code icon"></i>
+                    <h3>Web Development</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis dolorem amet placeat aliquam necessitatibus totam quam? Fuga repudiandae laborum commodi quas magnam, quis nam quos qui odit. Molestias, voluptatum corporis?</p>
+                </div>
+                <div class="service">
+                    <i class="fa-solid fa-code icon"></i>
+                    <h3>Web Design</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae facere quam in atque, reiciendis nostrum rerum dolorem, laboriosam vero dolorum illum? Quaerat beatae aut sint possimus voluptate maiores aliquam eius!</p>
+                </div>
+                <div class="service">
+                    <i class="fa-solid fa-code icon"></i>
+                    <h3>Graphic Design</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nulla, error eos voluptas vel commodi modi! Necessitatibus dicta unde facilis pariatur voluptatibus totam, minus perferendis. Odit rerum odio corporis esse.</p>
+                </div>
             </div>
         </section>
         <section>
@@ -70,7 +90,34 @@
                 <h1>Message Us</h1>
             </header>
             <div class="content3">
-
+                <form name="messageForm" onsubmit="return validateForm()">
+                    <div class="inputBox">
+                    <label>Nama:</label>
+                    <input type="text" placeholder="Nama" name="fullName">
+                    <br>
+                    <label>Tanggal Lahir:</label>
+                    <input type="date" name="birthDate">
+                    <br>
+                    <label>Jenis Kelamin:</label>
+                    <div class="coloum">
+                    <input type="radio" id="male" name="gender" value="Laki-laki">
+                    <label for="male">Laki-laki</label>
+                    <input type="radio" id="female" name="gender" value="Perempuan">
+                    <label for="female">Perempuan</label>
+                    </div>
+                    <br>
+                    <label>Pesan:</label>
+                    <textarea name="message" placeholder="pesan"></textarea>
+                    <br>
+                    <input type="submit" value="Submit">
+                    </div>
+                </form>
+                <div class="senderMessage">
+                    <p>Nama: <span id="senderfullName"></span></p>
+                    <p>Tanggal Lahir: <span id="senderbirthDate"></span></p>
+                    <p>Jenis Kelamin: <span id="senderGender"></span></p>
+                    <p>Pesan: <span id="senderMessage"></span></p>
+                </div>
             </div>
         </section>
     </main>
