@@ -79,5 +79,3 @@ document.addEventListener('click', (e) => {
         navMenu.classList.remove('active');
     }
 });
-
-// Your existing JavaScript code remains below this...
