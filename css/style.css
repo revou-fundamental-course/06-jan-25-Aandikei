@@ -1,8 +1,13 @@
 *{
-    /* margin: 0 1;
-    padding: 0; */
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+
+html{
+    overflow-x: hidden;
+    width: 100%;
 }
 /* Header */
 .main-header {
@@ -14,6 +19,7 @@
 
 .logo-icon{
     margin-left: 25px;
+    margin: 10px 0;
     border: 1px solid;
     border-radius: 50%;
     width: 50px;
@@ -28,7 +34,7 @@ nav {
     border: 1px solid;
     width: 600px;
     border-radius: 5px;
-    margin-right: 100px;
+    /* margin-right: 100px; */
 }
 
 .burger-menu {
@@ -213,6 +219,7 @@ section .content1{
 
 .btnHire{
     display: inline-block;
+    margin-top: 10px;
     padding: 5px 10px;
     border-radius: 5px;
     text-decoration: none;
@@ -263,23 +270,36 @@ margin-bottom: -10px;
 .history-title{
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
+    padding-left: 10px;
     /* margin-left: 0px; */
 }
 
 .history>ul>li>h2{
+    padding-left: 10px;
     /* border: 1px solid; */
     font-size: 16px;
     /* margin-left: 20px; */
     margin-top: 0;
-    margin-bottom: -20px;
+    /* margin-bottom: 20px; */
+}
+
+.history>ul>li{
+    padding-left: 10px;
+}
+
+.history>ul{
+    margin-left: 15px;
 }
 
 .history>ol{
-    margin-bottom: 0;
+    margin-bottom: 20px;
+    padding-left: 10px;
 }
 
 .history>ol>li>p{
     /* border: 1px solid; */
+    padding-left: 10px;
     margin-top: 0;
     /* margin-left: 10px; */
 }
@@ -353,7 +373,11 @@ header#message-us h1 {
 
 /* Content Styles */
 .content3 {
+    height: 100%;
+    width: 100%;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -407,6 +431,7 @@ header#message-us h1 {
 
 /* Sender Message Styles */
 .senderMessage {
+    max-width: 500px;
     flex: 1;
     margin-top: 20px;
     padding: 20px;
@@ -421,6 +446,9 @@ header#message-us h1 {
 }
 
 .senderMessage span {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
     font-weight: bold;
     color: #333;
 }
@@ -429,7 +457,7 @@ header#message-us h1 {
 @media (max-width: 600px) {
     .inputBox, .senderMessage {
         width: 100%;
-        margin: 10px 0;
+        margin: 10px 10px;
     }
 }
 
@@ -460,7 +488,7 @@ footer i:hover{
 /* End Footer */
 
 /* Responsive */
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 600px) {
     .burger-menu {
         display: block;
     }
@@ -495,5 +523,47 @@ footer i:hover{
 
     nav > ul > a:last-child {
         border-bottom: none;
+    }
+
+    .card{
+        max-width: 420px;
+    }
+
+    .history {
+        width: 100%;  /* Ubah width agar full di mobile */
+        padding: 0 15px; /* Tambah padding kiri-kanan */
+        margin: 20px 0; /* Atur margin atas-bawah */
+    }
+
+    .history-title {
+        padding: 0; /* Reset padding */
+        margin: 20px 0; /* Atur margin */
+        width: 100%; /* Full width */
+        text-align: center;
+    }
+
+    .history > ul {
+        padding: 0; /* Reset padding */
+        margin-left: 20px; /* Reset margin */
+        list-style-position: outside; /* Pindah bullet point ke dalam */
+    }
+
+    .history > ul > li {
+        padding: 0; /* Reset padding */
+    }
+
+    .history > ul > li > h2 {
+        padding: 0; /* Reset padding */
+        margin: 10px 0; /* Atur margin */
+    }
+
+    .history > ol {
+        padding: 0 0 0 20px; /* Beri sedikit padding kiri untuk nomor */
+        margin: 0 0 20px 0; /* Atur margin bottom */
+    }
+
+    .history > ol > li > p {
+        padding: 0; /* Reset padding */
+        margin: 5px 0; /* Atur margin */
     }
 }
